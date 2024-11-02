@@ -1,0 +1,31 @@
+<FotoPerfilPage>:     #class name
+    FloatLayout:
+        canvas:
+            Rectangle:
+                size: self.size
+                pos: self.pos
+                source: "icones/bg1.png"
+                
+        LabelButton:
+            pos_hint: {"right": 0.85, "top": 0.95}
+            size_hint: 0.7, 0.1
+            bold: True
+            text: "Selecione Sua Foto de Perfil"
+        #images list
+        ScrollView:
+            pos_hint:{"right":0.9, "top":0.85}
+            size_hint:0.8, 0.73
+            GridLayout:
+                cols: 3
+                id: lista_fotos_perfil
+                size_hint_y: None
+                spacing:5, 5
+                height: self.minimum_height
+                row_default_height: "90dp"
+                row_force_default: True
+        # Return Button
+        ImageButton:
+            pos_hint: {"right": 0.2, "top": 0.12}
+            size_hint: 0.33, 0.12
+            source: "icones/voltar.png"
+            on_release: app.mudar_tela("ajustespages")
