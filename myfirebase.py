@@ -2,7 +2,7 @@ import requests
 from kivy.app import App    #to acess the app
 
 class MyFirebase():
-    API_KEY = 'AIzaSyBuAmTDMhvE2jomjuAf3PKF1h_wwxO14og'
+    API_KEY = ""
 
     def criar_conta(self, email, senha):
         link = f'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key={self.API_KEY}'  #link of our API
